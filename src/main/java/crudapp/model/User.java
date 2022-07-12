@@ -1,9 +1,6 @@
 package crudapp.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class User {
@@ -11,7 +8,9 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Column(name = "user_first_name")
     private String firstName;
+    @Column(name = "user_last_name")
     private String lastName;
     private int age;
 
